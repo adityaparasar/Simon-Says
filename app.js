@@ -12,7 +12,6 @@ let high=0;
 
 document.addEventListener("keypress", function(){
     if(started==false){
-        console.log("Game started");
         started= true;
 
         levelup();
@@ -41,11 +40,9 @@ function levelup(){
     let rdmIdx= Math.floor(Math.random()*3);
     let rdmColor = btns[rdmIdx];
     let rdmbtn= document.querySelector(`.${rdmColor}`);
-    // console.log(rdmIdx);
-    // console.log(rdmColor);
-    // console.log(rdmbtn);
+    
     gameseq.push(rdmColor);
-    console.log(gameseq);
+    
 
 
     gameFlash(rdmbtn);
